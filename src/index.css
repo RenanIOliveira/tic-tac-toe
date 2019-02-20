@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Acme|Varela+Round');
+
+
+body{
+    background-color: rgb(96, 221, 221);
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+}
+
+ol, ul{
+    padding-left: 30px;
+}
+
+.board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.status{
+    margin-bottom: 10px;
+}
+
+.Title{
+    width: 100%;
+    display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: rgb(107, 107, 211);
+    font-family: 'Acme', sans-serif;
+    font-size: 80px;
+}
+
+@keyframes fadeInOpacity {
+    from {opacity: 0;}
+    to{opacity: 1;}
+}
+
+@keyframes grayToBlue {
+    from {color:rgb(184, 181, 181);}
+    to{color: rgb(107, 107, 211);}
+}
+
+@keyframes blueToGray{
+    from {color: rgb(107, 107, 211);}
+    to{color:rgb(184, 181, 181);}
+}
+
+.square{
+    background: #fff;
+    border: 1px solid #999;
+    color: rgb(124, 124, 212);
+    float: left;
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 100px;
+    height: 100px;
+    margin-right: -1px;
+    margin-top: -1px;
+    text-align:center;
+    width: 100px;
+}
+
+
+.square0{
+    border-radius: 10% 0% 0% 0%;
+}
+
+.square2{
+    border-radius: 0% 10% 0% 0%;
+}
+
+.square6{
+    border-radius: 0% 0% 0% 10%;
+}
+
+.square8{
+    border-radius: 0% 0% 10% 0%;
+}
+
+.square:focus{
+    outline: none;
+}
+
+.kbd-navigation .square:focus{
+    background: #ddd;
+}
+
+.game{
+    padding-top: 10px;
+    text-align: center;
+    flex-direction: row;
+    background-size: 100%;
+    -webkit-animation-name: fadeInOpacity; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1.5s; /* Safari 4.0 - 8.0 */
+    animation-name: fadeInOpacity;
+    animation-duration: 1.5s;
+}
+
+.game-board{
+    height: 300px;
+    width: 300px;
+    display: inline-block;
+}
+
+.game-info{
+    padding-top:30px;
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom:180px;
+    color: rgb(107, 107, 211);
+    font-family: 'Acme', sans-serif;
+    font-size: 40px;
+    -webkit-animation-name: fadeInOpacity; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1.4s; /* Safari 4.0 - 8.0 */
+    animation-name: fadeInOpacity;
+    animation-duration: 1.4s;
+}
+
+.fadeIn{
+    -webkit-animation-name: fadeInOpacity; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: .8s; /* Safari 4.0 - 8.0 */
+    animation-name: fadeInOpacity;
+    animation-duration: .8s;
+}
+
+
+.TurnIndicator{
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.TurnIndicator>*{
+    font-size: 100px;
+   height: 200px;
+   width: 400px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.Indicator{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 200px;
+    color:rgb(184, 181, 181);
+    -webkit-animation-name: blueToGray; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: .8s; /* Safari 4.0 - 8.0 */
+    animation-name: blueToGray;
+    animation-duration: .8s;
+}
+
+.activeIndicator>*{
+    font-size: 20px;
+}
+
+.activeIndicator{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 200px;
+    color: rgb(107, 107, 211);
+    -webkit-animation-name: grayToBlue; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: .8s; /* Safari 4.0 - 8.0 */
+    animation-name: grayToBlue;
+    animation-duration: .8s;
+}
